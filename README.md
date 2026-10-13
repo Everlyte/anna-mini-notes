@@ -21,7 +21,7 @@ pnpm validate                    # anna-app validate --strict
 pnpm dev                         # anna-app dev --no-llm --bundle bundle --slug mini-notes
 ```
 
-打开 CLI 输出的 `http://127.0.0.1:5180/dev/<wid>?t=<token>`。不要直接打开 `index.html` 或用 Vite dev server 代替 Anna harness。首次启动 uvx 需下载官方 Python runtime；若桥接进程首次下载超过 CLI 的 8 秒启动期限，先运行 `uvx --from anna-app-runtime-local==0.2.0a28 anna-app-bridge --help` 完成预热，再重试。已有 Python 可通过 `UV_PYTHON=/path/to/python3` 指定。
+打开 CLI 输出的 `http://127.0.0.1:5180/dev/<wid>?t=<token>`。不要直接打开 `index.html` 或用 Vite dev server 代替 Anna harness。首次启动 uvx 需下载官方 Python runtime；若桥接进程首次下载超过 CLI 的 8 秒启动期限，先运行 `uvx --from anna-app-runtime-local==0.2.0a28 python -c "import anna_app_runtime_local"` 完成预热，再重试。已有 Python 可通过 `UV_PYTHON=/path/to/python3` 指定。
 
 默认 `--storage legacy` 是每个 harness window 的内存 `runtime_state`。iframe 内重读可保留数据；**刷新外层 dashboard 或重启 dev 后不保证保留**。实际生产 Anna storage 由 APS KV 支持。此项目不需要 `--storage aps`，也不登录 Anna。
 
