@@ -1,0 +1,23 @@
+{
+  "name": "anna-mini-notes",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.25.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "vite build",
+    "validate": "anna-app validate --strict",
+    "dev": "anna-app dev --no-llm --bundle bundle --slug mini-notes",
+    "test": "node --test tests/*.test.mjs",
+    "test:protocol": "python3 scripts/test_protocol.py",
+    "test:sampling": "anna-app executa dev --dir executas/mini-notes --mock-sampling fixtures/sampling.jsonl --invoke summarize --args '{\"text\":\"\u660e\u5929\u8ddf\u5ba2\u6237 follow up\\n\u4fee\u590d\u767b\u5f55 bug\\nWorkshop \u5185\u5bb9\u60f3\u6cd5\"}' --json",
+    "package:binary": "python3 scripts/package_binary.py"
+  },
+  "devDependencies": {
+    "@anna-ai/cli": "0.1.58",
+    "vite": "7.3.7"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "tool-mini-notes-summarizer", "display_name": "Mini Notes Summarizer", "version": "1.0.0",
+  "description": "Summarize notes using the host LLM through reverse JSON-RPC sampling.",
+  "host_capabilities": ["llm.sample"],
+  "tools": [{"name": "summarize", "description": "Summarize note text in its original language.", "parameters": [{"name": "text", "type": "string", "required": true, "description": "Current notes, in their addition order"}]}],
+  "runtime": {"type": "binary", "binary": {"entrypoint": {"default": "bin/mini-notes", "windows-x86_64": "bin/mini-notes.exe"}, "permissions": {"bin/mini-notes": "0o755", "bin/mini-notes.exe": "0o755"}}}
+}

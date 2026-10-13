@@ -1,0 +1,8 @@
+node_modules/
+bundle/
+dist/
+.anna/
+.DS_Store
+__pycache__/
+evidence/*.log
+evidence/*.jsonl

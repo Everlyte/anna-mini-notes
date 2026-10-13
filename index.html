@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mini Notes</title></head>
+<body>
+<main>
+  <header><span class="eyebrow">A LITTLE SPACE FOR YOUR THOUGHTS</span><h1>Mini Notes<span>✳</span></h1><p>记下当下，理清下一步。</p></header>
+  <p id="status" role="status">正在连接 Anna…</p>
+  <form id="note-form"><label for="content">新的笔记</label><textarea id="content" maxlength="2000" placeholder="有什么值得记下来？" rows="3" disabled></textarea><div class="form-bottom"><span>每条最多 2,000 字</span><button id="save" disabled>保存笔记 ↗</button></div></form>
+  <p id="error" role="alert" hidden></p>
+  <section aria-labelledby="list-title"><div class="section-heading"><h2 id="list-title">你的笔记 <span id="count">0</span></h2><button id="refresh" class="quiet" disabled>重新读取</button></div><p id="empty">还没有笔记。从一个小想法开始。</p><ol id="notes"></ol></section>
+  <section class="summary-card" aria-labelledby="summary-title"><div class="section-heading"><h2 id="summary-title">把想法串起来</h2><button id="summarize" disabled>Summarize ✧</button></div><p id="summary" aria-live="polite">保存笔记后，生成一段简明总结。</p></section>
+  <footer>MINI NOTES · POWERED BY ANNA</footer>
+</main><script type="module" src="/src/main.js"></script>
+</body></html>

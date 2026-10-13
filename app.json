@@ -1,0 +1,5 @@
+{
+  "slug": "mini-notes", "name": "Mini Notes", "version": "1.0.0",
+  "description": "A small Anna App for notes and host-powered LLM summaries.",
+  "bundled_executas": {"mini-notes": {"path": "executas/mini-notes"}}
+}
