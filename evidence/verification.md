@@ -29,3 +29,12 @@ sampling/createMessage invoke_id=2 request_id=mini-notes-sampling-1
 `ui-harness.jpg` 为实际运行截图，左侧展示预期错误，右侧展示 storage / tools RPC log。测试使用题目示例笔记，没有真实用户数据。协议日志通过 `pnpm test:protocol` 本地生成，不提交含临时会话数据的 recording。
 
 GitHub Actions 的实际运行状态与各平台原生 smoke test 请查看仓库 Actions / Release；此记录中的本地交叉编译不冒充 Windows 原生执行。
+
+## 已完成的原生 CI 与 Release
+
+[v1.0.1 Actions run](https://github.com/Everlyte/anna-mini-notes/actions/runs/38365371656) **全部成功**：
+
+- macos-14 / darwin-arm64：编译、归档解压 describe、完整反向 RPC 测试通过。
+- macos-15-intel / darwin-x86_64：同上，通过。
+- windows-latest / windows-x86_64：同上，通过（协议和日志显式 UTF-8，支持中文）。
+- Release job：三平台 archive 与 SHA256 sidecar 已上传到 [GitHub Release v1.0.1](https://github.com/Everlyte/anna-mini-notes/releases/tag/v1.0.1)。
