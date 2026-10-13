@@ -1,6 +1,6 @@
 # 验收记录
 
-2026-10-13，macOS ARM64；Node 22.16.0、pnpm 11.25.0、Go 1.26.1、Anna CLI 0.1.58 / local runtime 0.2.0a28。
+2026-10-13，macOS ARM64；Node 24.19.0、pnpm 11.25.0、Go 1.26.1、Anna CLI 0.1.58 / local runtime 0.2.0a28。
 
 | 检查 | 结果 |
 |---|---|
