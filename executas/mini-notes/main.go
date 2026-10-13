@@ -139,7 +139,7 @@ func main() {
 					version = "2.0"
 					caps["sampling"] = object{}
 				}
-				reply(id, object{"protocolVersion": version, "serverInfo": object{"name": "tool-mini-notes-summarizer", "version": "1.0.0"}, "client_capabilities": caps, "capabilities": caps})
+				reply(id, object{"protocolVersion": version, "serverInfo": object{"name": "tool-mini-notes-summarizer", "version": "1.0.1"}, "client_capabilities": caps, "capabilities": caps})
 			case "describe":
 				reply(id, manifest)
 			case "health":

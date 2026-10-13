@@ -1,7 +1,7 @@
 {
   "slug": "mini-notes",
   "name": "Mini Notes Summarizer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "executa_type": "tool",
   "tool_id": "tool-mini-notes-summarizer",
   "type": "go",
@@ -16,15 +16,15 @@
     "type": "binary",
     "binary_artifacts": {
       "darwin-arm64": {
-        "path": "../../dist/mini-notes-1.0.0-darwin-arm64.tar.gz",
+        "path": "../../dist/mini-notes-1.0.1-darwin-arm64.tar.gz",
         "entrypoint": "bin/mini-notes"
       },
       "darwin-x86_64": {
-        "path": "../../dist/mini-notes-1.0.0-darwin-x86_64.tar.gz",
+        "path": "../../dist/mini-notes-1.0.1-darwin-x86_64.tar.gz",
         "entrypoint": "bin/mini-notes"
       },
       "windows-x86_64": {
-        "path": "../../dist/mini-notes-1.0.0-windows-x86_64.zip",
+        "path": "../../dist/mini-notes-1.0.1-windows-x86_64.zip",
         "entrypoint": "bin/mini-notes.exe"
       }
     }

@@ -1,5 +1,5 @@
 {
-  "name": "tool-mini-notes-summarizer", "display_name": "Mini Notes Summarizer", "version": "1.0.0",
+  "name": "tool-mini-notes-summarizer", "display_name": "Mini Notes Summarizer", "version": "1.0.1",
   "description": "Summarize notes using the host LLM through reverse JSON-RPC sampling.",
   "host_capabilities": ["llm.sample"],
   "tools": [{"name": "summarize", "description": "Summarize note text in its original language.", "parameters": [{"name": "text", "type": "string", "required": true, "description": "Current notes, in their addition order"}]}],

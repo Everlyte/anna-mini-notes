@@ -4,7 +4,7 @@ import argparse, json, pathlib, queue, subprocess, threading, uuid
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 parser=argparse.ArgumentParser();parser.add_argument('--binary');args=parser.parse_args()
 command=[str(pathlib.Path(args.binary).resolve())] if args.binary else ['go','run','.']
-p=subprocess.Popen(command,cwd=ROOT/'executas/mini-notes',stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True,bufsize=1)
+p=subprocess.Popen(command,cwd=ROOT/'executas/mini-notes',stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True,encoding="utf-8",bufsize=1)
 frames=queue.Queue();errors=[]
 def reader():
     for line in p.stdout: frames.put(line)
@@ -12,7 +12,7 @@ def stderr():
     for line in p.stderr: errors.append(line)
 threading.Thread(target=reader,daemon=True).start();threading.Thread(target=stderr,daemon=True).start()
 (ROOT/'evidence').mkdir(exist_ok=True)
-log=(ROOT/'evidence/protocol.jsonl').open('w')
+log=(ROOT/'evidence/protocol.jsonl').open('w',encoding='utf-8')
 def record(direction,frame): log.write(json.dumps({'direction':direction,'frame':frame},ensure_ascii=False)+'\n');log.flush()
 def send(frame): record('host -> tool',frame);p.stdin.write(json.dumps(frame)+'\n');p.stdin.flush()
 def receive():

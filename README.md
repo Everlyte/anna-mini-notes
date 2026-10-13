@@ -104,13 +104,13 @@ archive manifest 包含 name、version、tools、host_capabilities，以及准�
 
 ## GitHub Actions Release
 
-`.github/workflows/release.yml` 支持推送 `v*` tag 或 **Actions → Release Executa binaries → Run workflow**（tag 默认 `v1.0.0`）。tag 必须匹配 Tool manifest 版本。
+`.github/workflows/release.yml` 支持推送 `v*` tag 或 **Actions → Release Executa binaries → Run workflow**（tag 默认 `v1.0.1`）。tag 必须匹配 Tool manifest 版本。
 
 一次运行由 macOS ARM、macOS Intel、Windows x64 三个原生 runner 构建并测试，再统一上传 **GitHub Release assets**：
 
-- `mini-notes-1.0.0-darwin-arm64.tar.gz`
-- `mini-notes-1.0.0-darwin-x86_64.tar.gz`
-- `mini-notes-1.0.0-windows-x86_64.zip`
+- `mini-notes-1.0.1-darwin-arm64.tar.gz`
+- `mini-notes-1.0.1-darwin-x86_64.tar.gz`
+- `mini-notes-1.0.1-windows-x86_64.zip`
 - 各文件对应的 `.sha256`
 
 workflow artifacts 仅负责构建 job 间传递，最终 release job 使用 `gh release upload`。无需个人 PAT，使用仓库 `GITHUB_TOKEN`，只给 release job `contents: write`。本题无需发布到 Anna 商店，无需签名/公证。
